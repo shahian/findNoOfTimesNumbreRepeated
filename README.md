@@ -1,4 +1,5 @@
 # findNoOfTimesNumbreRepeated
+
 the code finds the number of times each number is repeated in the list.
 
 The Arrays.asList() method is used to create a List<Integer> containing some integer values.
@@ -9,7 +10,7 @@ The Collectors.groupingBy() method is called on this stream with Function.identi
 
 Function.identity() is used as the grouping function for the Collectors.groupingBy() method. This means that the elements of the stream are grouped according to their identity, which in this case is their integer value.
 
-Using Function.identity() as the grouping function is a common idiom in Java streams when you want to group elements by their natural key (i.e., the value itself) rather than applying a custom grouping function.
+Using Function.identity() as the grouping function is a common idiom in Java streams when you want to group elements by their natural key rather than applying a custom grouping function.
   
   
 The result of the Collectors.groupingBy() method is a Map<Integer, Long> where the keys are the distinct integer values in the list, and the values are the number of occurrences of each value.
