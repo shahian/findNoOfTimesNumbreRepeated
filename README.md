@@ -1,5 +1,10 @@
 # findNoOfTimesNumbreRepeated
 
+## Examples
+1. [example1](#example1)
+2. [example2](#example2)
+ 
+### example1
 the code finds the number of times each number is repeated in the list.
 
 The Arrays.asList() method is used to create a List<Integer> containing some integer values.
