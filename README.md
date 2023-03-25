@@ -1,9 +1,12 @@
 # findNoOfTimesNumbreRepeated
 the code finds the number of times each number is repeated in the list.
 
-the code uses the Collectors.groupingBy() method to group the integers in the list by their identity (i.e., the integer value itself), and then applies the Collectors.counting() downstream collector to count the number of occurrences of each integer value.
+The Arrays.asList() method is used to create a List<Integer> containing some integer values.
 
-The resulting Map<Integer, Long> contains the distinct integer values in the list as keys, and the number of occurrences of each integer value as values.
+The stream() method is then called on the List<Integer>, which returns a stream of integer values.
 
-The forEach() method is then called on the resulting map to print each key-value pair to the console, which displays the number of times each number is repeated in the list.
+The Collectors.groupingBy() method is called on this stream with Function.identity() as the grouping function and Collectors.counting() as the downstream collector. This groups the integer values by their identity (i.e., the integer value itself), and counts the number of occurrences of each value.
 
+The result of the Collectors.groupingBy() method is a Map<Integer, Long> where the keys are the distinct integer values in the list, and the values are the number of occurrences of each value.
+
+Finally, the forEach() method is called on the Map<Integer, Long>, which prints each key-value pair to the console.
