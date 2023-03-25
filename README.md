@@ -40,18 +40,18 @@ Finally, the forEach() method is called on the Map<Integer, Long>, which prints 
                 .forEach(System.out::println);
  
 ```
- The stream() method is called on the List<Integer>, which returns a stream of integer values.
+1. The stream() method is called on the List<Integer>, which returns a stream of integer values.
 
-The Collectors.groupingBy() method is called on this stream with Function.identity() as the grouping function and Collectors.counting() as the downstream collector. This groups the integer values by their identity (i.e., the integer value itself), and counts the number of occurrences of each value. The result of this operation is a Map<Integer, Long>.
+2. The Collectors.groupingBy() method is called on this stream with Function.identity() as the grouping function and Collectors.counting() as the downstream collector. This groups the integer values by their identity (i.e., the integer value itself), and counts the number of occurrences of each value. The result of this operation is a Map<Integer, Long>.
 
-The entrySet() method is called on the resulting map, which returns a Set of key-value pairs in the map.
+3. The entrySet() method is called on the resulting map, which returns a Set of key-value pairs in the map.
 
-The stream() method is called on the resulting Set<Map.Entry<Integer, Long>>, which returns a stream of key-value pairs.
+4. The stream() method is called on the resulting Set<Map.Entry<Integer, Long>>, which returns a stream of key-value pairs.
 
-The sorted() method is called on this stream, with Map.Entry.comparingByValue((c1, c2) -> c2.compareTo(c1)) as the comparator. This sorts the key-value pairs in descending order of their value (i.e., the count of occurrences).
+5. The sorted() method is called on this stream, with Map.Entry.comparingByValue((c1, c2) -> c2.compareTo(c1)) as the comparator. This sorts the key-value pairs in descending order of their value (i.e., the count of occurrences).
 
-The map() method is called on the resulting stream of sorted key-value pairs, which maps each key-value pair to a String in the format of "key : value ".
+6. The map() method is called on the resulting stream of sorted key-value pairs, which maps each key-value pair to a String in the format of "key : value ".
 
-Finally, the forEach() method is called on the resulting stream of Strings, which prints each string to the console.
+7. Finally, the forEach() method is called on the resulting stream of Strings, which prints each string to the console.
 
 In summary, this code   counts the occurrences of each integer value in a List<Integer> and then sorts the results in descending order of their count of occurrences. The resulting output is a list of key-value pairs in the form of "key : value", where key is an integer value in the list and value is the number of occurrences of that value.
