@@ -5,6 +5,14 @@
 2. [example2](#example2)
  
 ### example1
+```
+List<Integer>integers = Arrays.asList(2, 3, 4, 2, 9, 2, 3, 7, 3, 8, 9, 4, 6, 2, 4, 5, 7, 9, 7, 8, 4, 1, 5, 3, 9, 8, 6, 7, 5, 4, 2, 5, 4, 6, 1);
+        Map<Integer, Long> collect = integers.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        collect.forEach((key,value)->{
+            System.out.println(key +" : "+value);
+        });
+
+```
 the code finds the number of times each number is repeated in the list.
 
 The Arrays.asList() method is used to create a List<Integer> containing some integer values.
